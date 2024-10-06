@@ -1,14 +1,13 @@
-# Welcome to your CDK TypeScript project
+# Hello World
 
-This is a blank project for CDK development with TypeScript.
+We create a simple endpoint and create a Lambda function that handles the request
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Its very simple,
 
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+1. Create the function
+   - The runtime, code(location), and handler({file}.{name of function})
+2. Create the api gateway
+   - reference the hanlder (the function we created in #1)
+   - proxy false
+3. Add a resource (so `/endpoint`)
+4. Add method to that resource (so, `GET`, `POST`, etc)
